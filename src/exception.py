@@ -11,7 +11,7 @@ def error_message_detail(error,error_detail:sys):
 
     #Returns a formatted string containing the script name, line number, and error message.
 
-class CustomerException(Exception):
+class CustomException(Exception):
 
     def __init__(self,error_message,error_detail:sys):
         super().__init__(error_message)
@@ -29,5 +29,5 @@ class CustomerException(Exception):
     except Exception as e:
  
         logging.info("Divide by Zero")
-        raise CustomerException(e,sys)  """
+        raise CustomException(e,sys)  """
         
